@@ -5,7 +5,7 @@ function Top({data}) {
     <div>
       <div className="top">
         <div className="location">
-          <p>{data.name}</p>
+          {data.name ? <p>{data.name}</p> : <h1 style={{fontSize: 32, textAlign: 'center'}}>Not search yet</h1>}
         </div>
         <div className="temp">
           {data.main ? <h1>{data.main.temp.toFixed()}°F</h1> : null}
